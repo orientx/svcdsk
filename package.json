@@ -1,0 +1,56 @@
+{
+  "name": "servicedesk",
+  "version": "1.0.0",
+  "description": "[Aqua](https://github.com/jedireza/aqua) is what you're looking for.",
+  "main": "Gruntfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "supervisor ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LHI",
+  "license": "ISU",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orientx/nd_st.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orientx/nd_st/issues"
+  },
+  "homepage": "https://github.com/orientx/nd_st#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "backbone": "^1.3.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "compression": "^1.6.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "csurf": "^1.9.0",
+    "emailjs": "^1.0.8",
+    "express": "^4.15.2",
+    "express-cluster": "0.0.4",
+    "express-session": "^1.15.1",
+    "helmet": "^2.3.0",
+    "jade": "^1.11.0",
+    "log4js": "^1.1.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.9.1",
+    "mongoose-unique-validator": "^1.0.5",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "passport-oauth": "^1.0.0",
+    "passport-tumblr": "^0.1.2",
+    "passport-twitter": "^1.0.4",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.4.1",
+    "serve-static": "^1.12.1",
+    "underscore": "^1.8.3"
+  }
+}

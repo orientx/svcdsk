@@ -1,0 +1,29 @@
+extends ../layouts/default
+
+block content
+    .masthead.clearfix
+        .inner
+            h3.masthead-brand 수정
+            nav
+                ul.nav.masthead-nav
+                    li.active
+                        a(href='/question') 목록
+                
+            form.form.col-md-12.center-block(name='form' action='/question/#{question._id}/edit' method='post')
+                .form-group
+                    input.form-control.input-lg(type='text' placeholder='Title' name='question[title]' required value='#{question.title}')
+                .form-group
+                    input.form-control.input-lg(type='text' placeholder='작성자명' name='question[name]' value='')
+                .form-group
+                    input.form-control.input-lg(type='email' placeholder='e-mail' name='question[email]' value='')
+                .form-group
+                    input.form-control.input-lg(type='text' placeholder='아이디' name='question[user_id]' value='')
+                .form-group
+                    textarea.form-control.textarea(placeholder='내용' name='question[content]' style='height:150px' value='') #{question.content}
+                .form-group
+                    button.btn.btn-success.btn-lg.btn-block(type='submit') 저장
+                .form-group
+                    input.form-control.input-lg(type='hidden'  name='etcInfo[name]' value='Mr.Lee')
+                .form-group
+                    input.form-control.input-lg(type='hidden'  name='etcInfo[age]' value='22')
+            

@@ -1,0 +1,867 @@
+doctype html(lang='ko')
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='alternate', type='application/rss+xml', title='IT', href='http://itjunijuni.tistory.com/rss')
+    link(href='http://tistory4.daumcdn.net/tistory/2440266/skin/images/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    link(href='http://tistory4.daumcdn.net/tistory/2440266/skin/style.css?_T_=1482013242', rel='stylesheet')
+    link(rel='shortcut icon', href='/favicon.ico')
+    title IT :: &apos;&apos;&#xC758; &#xAC80;&#xC0C9;&#xACB0;&#xACFC;
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      |   
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    script(type='text/javascript').
+      var login_ck="null";
+    meta(http-equiv='imagetoolbar', content='no')
+    style(type='text/css').
+      #daumSearchBox {
+      height: 21px;
+      background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bg_search2_2.gif);
+      margin: 5px auto ;
+      padding: 0;
+      }
+      #daumSearchBox input {
+      background: none;
+      margin : 0;
+      padding : 0;
+      border : 0;
+      }
+      #daumSearchBox #daumLogo {
+      width: 34px;
+      height: 21px;
+      float: left;
+      margin-right: 5px;
+      background-image : url(//i1.daumcdn.net/img-media/tistory/img/bg_search1_2_2010ci.gif);
+      }
+      #daumSearchBox #show_q {
+      background-color: transparent;
+      border: none;
+      font: 12px Gulim, Sans-serif;
+      color: #555;
+      margin-top: 4px;
+      margin-right: 15px;
+      float: left;
+      }
+      #daumSearchBox #show_btn {
+      background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bt_search_2.gif);
+      width: 37px;
+      height: 21px;
+      float: left;
+      margin:0;
+      cursor:pointer;
+      text-indent:-1000em;
+      }
+    link(rel='stylesheet', href='//t1.daumcdn.net/tistory_admin/blogs/plugins/lightbox/assets/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href='//t1.daumcdn.net/tistory_admin/blogs/plugins/TistoryProfileLayer/style.css')
+    script(type='text/javascript', src='//t1.daumcdn.net/tistory_admin/blogs/plugins/TistoryProfileLayer/profile.js')
+    | &#x9;
+    style(type='text/css').
+      .another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+      .another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+      .another_category h4 a { font-weight: bold !important; }
+      .another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+      * html .another_category table { width: auto !important; }
+      *:first-child+html .another_category table { width: auto !important; }
+      .another_category th, .another_category td { padding: 0 0 4px !important; }
+      .another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+      .another_category td { text-align: right; width: 80px; font-size: 11px; }
+      .another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+      .another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+      .another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+      .another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+      .another_category_color_gray * { color: #909090 !important; }
+      .another_category_color_gray th a.current{border-color:#909090 !important;}
+      .another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+      .another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+      .another_category_color_red * { color: #E86869 !important; }
+      .another_category_color_red th a.current{border-color:#E86869 !important;}
+      .another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+      .another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+      .another_category_color_green * { color: #64C05B !important; }
+      .another_category_color_green th a.current{border-color:#64C05B !important;}
+      .another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+      .another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+      .another_category_color_blue * { color: #477FD6 !important; }
+      .another_category_color_blue th a.current{border-color:#477FD6 !important;}
+      .another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+      .another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+      .another_category_color_violet * { color:#9D64C5 !important; }
+      .another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+      .another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+    script(type='text/javascript').
+      window.TistoryBlog = {
+      url: "http://itjunijuni.tistory.com",
+      tistoryUrl: "http://itjunijuni.tistory.com"
+      };
+      var servicePath = "";
+      var blogURL = "";
+    |         
+    script(type='text/javascript', src='//t1.daumcdn.net/tistory_admin/blogs/script/_/base.js')
+    |         
+    link(rel='stylesheet', type='text/css', href='//t1.daumcdn.net/tistory_admin/blogs/style/dialog.css')
+    link(rel='stylesheet', type='text/css', href='//t1.daumcdn.net/tistory_admin/blogs/style/menubar.css')
+    script.
+      if (!window.jQuery) document.write("<script src=\\"//t1.daumcdn.net/tistory_admin/lib/jquery-1.12.4.min.js\"><\/script>")
+    style(type='text/css').
+      .tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}
+    meta(name='referrer', content='always')
+    link(rel='shortcut icon', href='//t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico')
+    meta(name='description', content='IT관련 정보가 있는! \
+    T블로그입니다.')
+    // BEGIN OPENGRAPH
+    link(rel='canonical', href='http://itjunijuni.tistory.com')
+    meta(property='og:type', content='website')
+    meta(property='og:site_name', content="''의 검색결과")
+    meta(property='og:title', content="''의 검색결과")
+    meta(property='og:description', content='IT관련 정보가 있는! \
+    T블로그입니다.')
+    meta(property='og:image', content='https://t1.daumcdn.net/cssjs/icon/557567EA016E200001')
+    // END OPENGRAPH
+    // BEGIN TWITTERCARD
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@TISTORY')
+    meta(name='twitter:title', content="''의 검색결과")
+    meta(name='twitter:description', content='IT관련 정보가 있는! \
+    T블로그입니다.')
+    meta(property='twitter:image', content='https://t1.daumcdn.net/cssjs/icon/557567EA016E200001')
+    // END TWITTERCARD
+    // BEGIN STRUCTURED_DATA
+    script(type='application/ld+json').
+      {"@context":"http://schema.org", "@type":"ItemList","itemListElement":[{"@type":"ListItem", "position":1,"item": {"@id":"/category","name":"Post List"}}]}
+    // END STRUCTURED_DATA
+    link(rel='apple-touch-icon', href='//i1.daumcdn.net/thumb/C180x180/?fname=http%3A%2F%2Fcfile5.uf.tistory.com%2Fimage%2F241F093D5701E7380371B5')
+    link(rel='apple-touch-icon', sizes='76x76', href='//i1.daumcdn.net/thumb/C76x76/?fname=http%3A%2F%2Fcfile5.uf.tistory.com%2Fimage%2F241F093D5701E7380371B5')
+    link(rel='apple-touch-icon', sizes='120x120', href='//i1.daumcdn.net/thumb/C120x120/?fname=http%3A%2F%2Fcfile5.uf.tistory.com%2Fimage%2F241F093D5701E7380371B5')
+    link(rel='apple-touch-icon', sizes='152x152', href='//i1.daumcdn.net/thumb/C152x152/?fname=http%3A%2F%2Fcfile5.uf.tistory.com%2Fimage%2F241F093D5701E7380371B5')
+  body
+    |http://itjunijuni.tistory.com/search/
+    script(type='text/javascript').
+      T.config = {"TOP_SSL_URL":"https:\\/\/www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"","NEXT_PAGE":"","BLOG":{"isDormancy":false,"title":"IT"},"NEED_COMMENT_LOGIN":false,"COMMENT_LOGIN_CONFIRM_MESSAGE":"","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fitjunijuni.tistory.com%2Fsearch%2F","DEFAULT_URL":"http:\/\/itjunijuni.tistory.com","USER":{"name":null,"homepage":null}};
+    script(type='text/javascript', src='//t1.daumcdn.net/tistory_admin/blogs/script/blog/common.js')
+    div(style='margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0')
+    #header
+      .container-fluid
+        .row
+          .col-md-12
+            nav.navbar.navbar-inverse.navbar-fixed-top
+              .container
+                .navbar-header
+                  a.navbar-brand(href='/', title='IT')
+                    img(src='http://tistory4.daumcdn.net/tistory/2440266/skin/images/logo_shrink.png', width='170px')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+                    span.icon-bar
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span.icon-bar
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    span.icon-bar
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                #navbar-main.navbar-collapse.collapse
+                  ul.nav.navbar-nav
+                    li
+                      a(href='/notice') &#xACF5;&#xC9C0;&#xC0AC;&#xD56D;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                      a#download.dropdown-toggle(data-toggle='dropdown', href='#')
+                        i.fa.fa-folder
+                        | &#xBAA9;&#xB85D;
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        span.caret
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      ul.dropdown-menu(aria-labelledby='download')
+                        //
+                          <li><a href="/tag">태그</a></li>
+                          <li><a href="/media">미디어로그</a></li>
+                          <li><a href="/location">위치로그</a></li>
+                        li
+                          a(href='/category/제이쿼리') &#xC81C;&#xC774;&#xCFFC;&#xB9AC;
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='/category/자바스크립트') &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='/category/AJAX') AJAX
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='/category/플러그인') &#xD50C;&#xB7EC;&#xADF8;&#xC778;
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='/category/IT소식') IT&#xC18C;&#xC2DD;
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='/category/게임') &#xAC8C;&#xC784;
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li.divider(role='separator')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        li
+                          a(href='/guestbook') &#xBC29;&#xBA85;&#xB85D;
+                        //
+                          <li><a href="/admin">괸리자</a></li>
+                          <li><a href="/admin/entry/post">글쓰기</a></li>
+            | &#x9;&#x9;&#x9;&#x9;
+            #carousel.carousel.slide(data-ride='carousel')
+              // Indicators
+              ol.carousel-indicators
+                li.active(data-target='#carousel', data-slide-to='0')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li(data-target='#carousel', data-slide-to='1')
+              // Wrapper for slides 공지사항 아래 슬라이스
+              .carousel-inner(role='listbox')
+                .item.active
+                  img(src='http://tistory4.daumcdn.net/tistory/2440266/skin/images/slider_02.png', width='100%', alt='Carousel 01')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .carousel-caption
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                .item
+                  img(src='http://tistory4.daumcdn.net/tistory/2440266/skin/images/slider_03.png', width='100%', alt='Carousel 03')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .carousel-caption
+              // Controls
+              a.left.carousel-control(href='#carousel', role='button', data-slide='prev')
+                i.fa.fa-chevron-left.fa-2x
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                span.sr-only Previous
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+              a.right.carousel-control(href='#carousel', role='button', data-slide='next')
+                i.fa.fa-chevron-right.fa-2x
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                span.sr-only Next
+    // header close
+    #content
+      .container
+        .row
+          .col-md-9
+            #searchList.nonEntry.jumbotron
+              h1 &apos;&apos;&#xC5D0; &#xD574;&#xB2F9;&#xB418;&#xB294; &#xAE00; 0&#xAC74;
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.fa-ul
+          | &#x9;&#x9;&#x9;
+          .col-md-3
+            .sidebar
+              // 검색 모듈
+              #searchBox.widget
+                .input-group
+                  input.form-control(type='text', name='search', value='', onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }", placeholder='검색어를 입력하세요')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.input-group-btn
+                    button.btn.btn-default(type='button', onclick="try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){}") &#xAC80;&#xC0C9;
+                // /input-group
+              // 공지사항 모듈
+              #notice.widget
+                h3
+                  i.fa.fa-bullhorn
+                  | &#xACF5;&#xC9C0;&#xC0AC;&#xD56D;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.fa-ul
+              // 카테고리 모듈
+              #category.widget
+                h3
+                  i.fa.fa-folder
+                  | &#xCE74;&#xD14C;&#xACE0;&#xB9AC;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul.tt_category
+                  li
+                    a.link_tit(href='/category')
+                      | IT&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      span.c_cnt (97)
+                    | &#x9;&#x9;&#x9;&#x9;
+                    ul.category_list
+                      li
+                        a.link_item(href='/category/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC')
+                          | &#xC81C;&#xC774;&#xCFFC;&#xB9AC;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (63)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8')
+                          | &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (15)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/CSS')
+                          | CSS&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (1)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/AJAX')
+                          | AJAX&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (3)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8')
+                          | &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (1)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/IT%EC%86%8C%EC%8B%9D')
+                          | IT&#xC18C;&#xC2DD;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (3)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/%EB%9D%BC%EB%9D%BC%EB%B2%A8%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC')
+                          | &#xB77C;&#xB77C;&#xBCA8; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (1)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/%EA%B2%8C%EC%9E%84')
+                          | &#xAC8C;&#xC784;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (10)
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        ul.sub_category_list
+                          li
+                            a.link_sub_item(href='/category/%EA%B2%8C%EC%9E%84/%EB%A6%AC%EA%B7%B8%EC%98%A4%EB%B8%8C%EB%A0%88%EC%A0%84%EB%93%9C')
+                              | &#xB9AC;&#xADF8;&#xC624;&#xBE0C;&#xB808;&#xC804;&#xB4DC;
+                              span.c_cnt (10)
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      li
+                        a.link_item(href='/category/Spring')
+                          | Spring&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          span.c_cnt (0)
+              // 태그목록 모듈
+              #tagbox.widget
+                h3
+                  i.fa.fa-tag
+                  | &#xD0DC;&#xADF8;&#xBAA9;&#xB85D;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul
+                  li
+                    a.cloud4(href='/tag/Jquery%20on') Jquery on
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20scrollTop') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; scrollTop
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/Jquery%20scrollTop') Jquery scrollTop
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20empty') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; empty
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8') &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/Jquery%20event') Jquery event
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/jquery%20%EC%9D%B4%EB%B2%A4%ED%8A%B8') jquery &#xC774;&#xBCA4;&#xD2B8;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/jquery%20click') jquery click
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EB%A1%A4') &#xB864;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/Jquery%20offset') Jquery offset
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20click') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; click
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/jQuery%20append') jQuery append
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20event') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; event
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20CHANGE') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; CHANGE
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/jquery%20mouseover') jquery mouseover
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20offset') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; offset
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/Javascript') Javascript
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20KEYUP') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; KEYUP
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20ANIMATE') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; ANIMATE
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20%EC%9D%B4%EB%B2%A4%ED%8A%B8') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; &#xC774;&#xBCA4;&#xD2B8;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/Jquery%20ANIMATE') Jquery ANIMATE
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20append') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; append
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/Ajax') Ajax
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud1(href='/tag/JQuery') JQuery
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20%3Acontains') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; :contains
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20on') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; on
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20mouseover') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; mouseover
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EB%A6%AC%EA%B7%B8%EC%98%A4%EB%B8%8C%EB%A0%88%EC%A0%84%EB%93%9C') &#xB9AC;&#xADF8;&#xC624;&#xBE0C;&#xB808;&#xC804;&#xB4DC;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud2(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC') &#xC81C;&#xC774;&#xCFFC;&#xB9AC;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a.cloud4(href='/tag/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC%20focus') &#xC81C;&#xC774;&#xCFFC;&#xB9AC; focus
+              // 달력 모듈
+              #calendar.widget
+                h3
+                  i.fa.fa-calendar-o
+                  | &#xB2EC;&#xB825;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                table.tt-calendar(cellpadding='0', cellspacing='1', style='width: 100%; table-layout: fixed')
+                  caption.cal_month
+                    a(href='/archive/201703', title='1개월 앞의 달력을 보여줍니다.') &laquo;
+                    | &#x9;&#x9;&#x9;&#x9;&nbsp;
+                    | &#x9;&#x9;&#x9;&#x9;
+                    a(href='/archive/201704', title='현재 달의 달력을 보여줍니다.') 2017/04
+                    | &#x9;&#x9;&#x9;&#x9;&nbsp;
+                    | &#x9;&#x9;&#x9;&#x9;
+                    a(href='/archive/201705', title='1개월 뒤의 달력을 보여줍니다.') &raquo;
+                  | &#x9;&#x9;&#x9;
+                  thead
+                    tr
+                      th.cal_week2 &#xC77C;
+                      | &#x9;&#x9;&#x9;&#x9;
+                      th.cal_week1 &#xC6D4;
+                      | &#x9;&#x9;&#x9;&#x9;
+                      th.cal_week1 &#xD654;
+                      | &#x9;&#x9;&#x9;&#x9;
+                      th.cal_week1 &#xC218;
+                      | &#x9;&#x9;&#x9;&#x9;
+                      th.cal_week1 &#xBAA9;
+                      | &#x9;&#x9;&#x9;&#x9;
+                      th.cal_week1 &#xAE08;
+                      | &#x9;&#x9;&#x9;&#x9;
+                      th.cal_week1 &#xD1A0;
+                  | &#x9;&#x9;&#x9;
+                  tbody
+                    tr.cal_week
+                      td.cal_day1 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day1 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day1 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day1 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day1 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day1 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 1
+                    | &#x9;&#x9;
+                    tr.cal_week.cal_current_week
+                      td.cal_day.cal_day_sunday.cal_day3 2
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 3
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 4
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 5
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 6
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day4 7
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 8
+                    | &#x9;&#x9;
+                    tr.cal_week
+                      td.cal_day.cal_day_sunday.cal_day3 9
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 10
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 11
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 12
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 13
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 14
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 15
+                    | &#x9;&#x9;
+                    tr.cal_week
+                      td.cal_day.cal_day_sunday.cal_day3 16
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 17
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 18
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 19
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 20
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 21
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 22
+                    | &#x9;&#x9;
+                    tr.cal_week
+                      td.cal_day.cal_day_sunday.cal_day3 23
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 24
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 25
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 26
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 27
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 28
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day.cal_day3 29
+                    | &#x9;&#x9;
+                    tr.cal_week
+                      td.cal_day.cal_day_sunday.cal_day3 30
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day2 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day2 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day2 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day2 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day2 &nbsp;
+                      | &#x9;&#x9;&#x9;
+                      td.cal_day2 &nbsp;
+    #footer-widget
+      .container
+        .row
+          .col-md-3.col-sm-6
+            // 프로필 모듈
+            #profile
+              h3 IT&#xC8FC;&#xB2C8;&#xC8FC;&#xB2C8;
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+              #blogImage
+                img.img-responsive.img-circle.text-center(src='https://t1.daumcdn.net/tistory_admin/blog/admin/profile.gif', alt='블로그 이미지', width='50%')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | IT&#xAD00;&#xB828; &#xC815;&#xBCF4;&#xAC00; &#xC788;&#xB294;!
+                | T&#xBE14;&#xB85C;&#xADF8;&#xC785;&#xB2C8;&#xB2E4;.
+              //
+                페이스북 등등 아이콘 링크 부분
+                <div class="social">
+                <a href="#"><i class="fa fa-facebook-square fa-2x" style="color:#3b5998"></i></a>
+                <a href="#"><i class="fa fa-twitter-square fa-2x" style="color:#00aced"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-2x" style="color:#517fa4"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square fa-2x" style="color:#dd4b39"></i></a>
+                <a href="#"><i class="fa fa-tumblr-square fa-2x" style="color:#32506d"></i></a>
+                <a href="#"><i class="fa fa-pinterest-square fa-2x" style="color:#cb2027"></i></a>
+                <a href="#"><i class="fa fa-wordpress fa-2x" style="color:#21759b"></i></a>
+                </div>
+          | &#x9;&#x9;&#x9;
+          | &#x9;&#x9;&#x9;
+          .col-md-3.col-sm-6
+            // 최근 포스트 모듈
+            #recentPost
+              h3 LATEST FROM OUR BLOG
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.fa-ul
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/99')  &#xB9AC;&#xADF8;&#xC624;&#xBE0C;&#xB808;&#xC804;&#xB4DC;[&#xB864;] &#xCC54;&#xD53C;&#xC5B8; &#xBC0F;...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries99
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/98')  Jquery[&#xC81C;&#xC774;&#xCFFC;&#xB9AC;] radio[&#xB77C;&#xB514;...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries98
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/97')  &#xCE74;&#xCE74;&#xC624;&#xB0B4;&#xBE44; &#xC624;&#xD508;API &#xACF5;&#xAC1C;.
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries97
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/96')  &#xB9AC;&#xADF8;&#xC624;&#xBE0C;&#xB808;&#xC804;&#xB4DC;[&#xB864;] 1vs1 &#xC194;&#xB85C;...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries96
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/95')  JavaScript[&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;] Con...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries95
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/94')  Laravel[&#xB77C;&#xB77C;&#xBCA8;] PHP &#xD504;&#xB808;&#xC784;...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries94
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/93')  &#xB9AC;&#xADF8;&#xC624;&#xBE0C;&#xB808;&#xC804;&#xB4DC;[&#xB864;] &#xC774;&#xC988;&#xB9AC;&#xC5BC;...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries93
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/92')  CSS &#xB9D0;&#xC904;&#xC784;[...&#xCC98;&#xB9AC;] text-ove...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries92
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/91')  JavaScript[&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;] set...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries91
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa-li.fa.fa-chevron-right
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  a(href='/89')  JavaScript[&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;] cha...
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.cnt
+                    span#commentCountOnRecentEntries89
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              a.btn.btn-primary(href='http://itjunijuni.tistory.com/rss', onclick='window.open(this.href); return false', role='button')
+                i.fa.fa-rss
+                |  RSS &#xAD6C;&#xB3C5;&#xD558;&#xAE30;
+          | &#x9;&#x9;&#x9;
+          | &#x9;&#x9;&#x9;
+          .col-md-3.col-sm-6
+            // 프로필 모듈
+            h3 LATEST COMMENTS
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            ul#recentComments.fa-ul
+              li
+                i.fa-li.fa.fa-chevron-right
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                a(href='/53#comment11189318')
+                  | &#xAC10;&#xC0AC;&#xD569;&#xB2C8;&#xB2E4;!
+                  | &#xB2E4;&#xD589;&#xD788;...
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                span.info
+                  span.name ajinn
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  span.date 03.24
+          | &#x9;&#x9;&#x9;
+          | &#x9;&#x9;&#x9;
+          .col-md-3.col-sm-6
+            // 카운터 모듈
+            #counter
+              h3 BLOG VISITORS
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.fa-ul
+                li.total
+                  i.fa-li.fa.fa-chevron-right
+                  | Total : 13,879
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.today
+                  i.fa-li.fa.fa-chevron-right
+                  | Today : 42
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.yesterday
+                  i.fa-li.fa.fa-chevron-right
+                  | Yesterday : 128
+    #footer
+      .container
+        .row
+          .col-md-12
+            .copyright
+              p.text-center
+                | Copyright &copy; 2015 
+                a(href='http://socialdev.co.kr', target='_blank') Socialdev
+                | . All Rights Reserved.
+                br
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='http://t1.daumcdn.net/tistory_admin/lib/jquery-2.1.4.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='http://tistory4.daumcdn.net/tistory/2440266/skin/images/bootstrap.min.js')
+    script.
+      $(window).scroll(function() {
+      if ($(document).scrollTop() > 50) {
+      $('nav').addClass('shrink');
+      } else {
+      $('nav').removeClass('shrink');
+      }
+      });
+    script(type='text/javascript', language='javascript').
+      $(document).ready(function(){
+      //로그인 스크립트 (로그인시 로그아웃으로 로그인을 바꾼다.)
+      if (login_ck == "admin") {
+      $(".admin").css({
+      "dislpay":"block";
+      });
+      }
+      });
+    script(type='text/javascript').
+      document.oncontextmenu = new Function ('return false');
+      document.ondragstart = new Function ('return false');
+      document.onselectstart = new Function ('return false');
+      document.body.style.MozUserSelect = 'none';
+    script(type='text/javascript', src='//t1.daumcdn.net/tistory_admin/blogs/plugins/PreventCopyContents/js/functions.js')
+    script#DragSearchJs(type='text/javascript', src='//s1.daumcdn.net/img.search/front/js/searchDragSelection.js?nil_ch=tistory', charset='euc-kr')
+    script.
+      (function($) {
+      $("body").bind('copy', function (e) {
+      var url = document.location.href,
+      decodedUrl = decodeURI(url),
+      selection = window.getSelection();
+      if (typeof window.getSelection == "undefined") {//IE8 or earlier...
+      event.preventDefault();
+      var pagelink = '\\n\n 출처: ' + decodedUrl,
+      copytext =  selection + pagelink;
+      if (window.clipboardData) {
+      window.clipboardData.setData('Text', copytext);
+      }
+      return;
+      }
+      var body_element = document.getElementsByTagName('body')[0];
+      //if the selection is short let's not annoy our users
+      if (("" + selection).length < 30) return;
+      //create a div outside of the visible area
+      var newdiv = document.createElement('div');
+      newdiv.style.position = 'absolute';
+      newdiv.style.left = '-99999px';
+      body_element.appendChild(newdiv);
+      newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+      //we need a <pre> tag workaround
+      //otherwise the text inside "pre" loses all the line breaks!
+      if (selection.getRangeAt(0).commonAncestorContainer.nodeName == "PRE") {
+      newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+      }
+      newdiv.innerHTML += "<br /><br />출처: <a href='" + url + "'>" + decodedUrl + "</a> [IT]";
+      selection.selectAllChildren(newdiv);
+      window.setTimeout(function () { body_element.removeChild(newdiv); }, 200);
+      });
+      })(jQuery);
+    script.
+      if (!window.jQuery) document.write("<script src=\\"//t1.daumcdn.net/tistory_admin/lib/jquery-1.12.4.min.js\"><\/script>")
+    | &#x9;
+    script(src='//t1.daumcdn.net/tistory_admin/blogs/plugins/lightbox/assets/js/lightbox.min.js')
+    | &#x9;
+    script.
+      lightbox.option({
+      "fadeDuration": 200,
+      "resizeDuration": 200,
+      "wrapAround": false,
+      "albumLabel": "%1 / %2",
+      "fitImagesInViewport":true ,
+      "stopEvent": false
+      })
+    script(type='text/javascript').
+      var _tiq = 'undefined' !== typeof _tiq ? _tiq : []; // Global Variables
+      _tiq.push(["__setParam", "title", "IT :: "]);
+      _tiq.push(["__setParam", "svcdomain", "user.tistory.com"]);
+      _tiq.push(["__setParam", "category", ""]);
+      _tiq.push(["__setParam", "articleno", ""]);
+      _tiq.push(["__setParam", "plink", "http://itjunijuni.tistory.com/"]);
+      _tiq.push(["__setParam", "date", ""]);
+      _tiq.push(["__setParam", "author", ""]);
+      _tiq.push(["__setParam", "length", ""]);
+      _tiq.push(["__setParam", "isauthor", ""]);
+      _tiq.push(["__setParam", "ishidden", ""]);
+      _tiq.push(["__setParam", "comments", ""]);
+      _tiq.push(["__setParam", "param1", ""]);
+      _tiq.push(["__setParam", "param2", "e"]);
+      _tiq.push(["__setParam", "param3", ""]);
+      _tiq.push(["__trackPageview"]);
+      (function(d) {
+      var se = d.createElement('script'); se.type = 'text/javascript'; se.async = true;
+      se.src = location.protocol + '//m2.daumcdn.net/tiara/js/td.min.js';
+      var s = d.getElementsByTagName('head')[0]; s.appendChild(se);
+      })(document);
+    script(type='text/javascript').
+      window.roosevelt_params_queue = window.roosevelt_params_queue || []; window.roosevelt_params_queue.push({channel_id: "dk", channel_label: "tistory"});
+    script(type='text/javascript', src='//adimg.daumcdn.net/rt/dk_bt/roosevelt_dk_bt.js', async='')
+    script(type='text/javascript').
+      if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}
+    | &#x9;&#x9;
+    #tistorytoolbarid(style='position:absolute;height:20px;top:4px;right:0px;background-color:transparent;background-image:none;z-index:11;')
+      .tistorytoolbar.tt_menubar_login
+        .tt_menubar_custom
+          #ttMenubarInnerWrap.tt_menubar_inner
+            .tt_menubar_bg_toolbar(style='background:#f5f5f5;opacity:1;filter:alpha(opacity=100);')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            h2(style='display:none;') &#xD2F0;&#xC2A4;&#xD1A0;&#xB9AC; &#xD234;&#xBC14;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .tt_menubar_mainmenu
+              a.tt_menubar_link_tit.tt_menubar_link_tit_daum.tt_menubar_link_tit_eng(href='http://www.daum.net/?nil_ref=tistory', target='_blank', style='color:#7b7b7b;') Daum
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .tt_menubar_bg_bar(style='background:#7b7b7b;opacity:0.2;filter:alpha(opacity=20);')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .tt_menubar_mainmenu
+              a.tt_menubar_link_tit.tt_menubar_link_tit_eng(href='http://www.tistory.com', style='color:#7b7b7b;') Tistory
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .tt_menubar_bg_bar(style='background:#7b7b7b;opacity:0.2;filter:alpha(opacity=20);')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .tt_menubar_logout
+              a.tt_menubar_link_tit(href='https://www.tistory.com/auth/login', style='color:#7b7b7b;') &#xB85C;&#xADF8;&#xC778;

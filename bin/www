@@ -1,0 +1,35 @@
+#!servicedesk nodejs env/ node
+
+//const cluster = require('express-cluster');
+const path = require('path');
+const CONFIG = require(path.join(__dirname, '../config/config.json'));
+
+/**
+ * make a log directory, just in case it isn't there.
+ */
+try {
+    require('fs').mkdirSync(path.join(__dirname, '../logs'));
+} catch (e) {
+    if (e.code != 'EEXIST') {
+        console.error("Could not set up log directory, error was: ", e);
+        process.exit(1);
+    }
+}
+
+/**
+ * Initialise log4js first, so we don't miss any log messages
+ */
+var log4js = require('log4js');
+log4js.configure(path.join(__dirname, '../config/log4js.json'));
+var logger = log4js.getLogger("startup");
+
+/**
+ *let's start up a cluster
+ */
+//cluster(function() {
+    var app = require('../app');
+    app.set('port', CONFIG.port || 3003);
+    var server = app.listen(app.get('port'), function() {
+        logger.info('Express server listening on port ', server.address().port, " with pid ", process.pid);
+    });
+//});

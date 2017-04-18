@@ -1,0 +1,26 @@
+{
+    "port": 3003,
+    "companyName": "ISU SYSTEM, Inc.",
+    "projectName": "SERVICE DESK",
+    "systemEmail": "hilee.em@gmail.com",
+    "cryptoKey": "3yb0ardc4t",
+    "log4j": {
+        "filepath": "logs/log4js.log",
+        "level": "DEBUG"
+    },
+    "DATABASE": {
+        "DATABASE_URL": "mongodb://127.0.0.1:27017/servicedesk",
+        "RECONNECT": true,
+        "RECONNECTION_INTERVAL": 5000,
+        "options": {
+                "db": {
+                    "native_parser": true,
+                    "server": {
+                        "poolSize": 10
+                    },
+                "user": "mysd",
+                "pass": "mysd123qwe"
+            }
+        }
+    }
+}

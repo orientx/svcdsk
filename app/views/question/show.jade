@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block content
+    div.container
+        div
+            button.btn.btn-primary.btn-signup(onclick="location.href='/question'") Back
+            button.btn.btn-primary.btn-info(onclick="location.href='/question/#{question._id}/edit'") Edit
+            button.btn.btn-primary.btn-danger(onclick="location.href='/question/#{question._id}/delete'") Delete
+        h3
+            span Title : #{question.title}
+        div
+            div
+                div
+                | Author : 
+                div
+                | xxx views
+                div
+                    span Created :
+        div #{question.content}    
+    

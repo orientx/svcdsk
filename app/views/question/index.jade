@@ -1,0 +1,58 @@
+extends ../layouts/default
+block head
+    script(src='/vendor/jquery/jquery.js')
+    script(src='/views/question/index.js')
+block content
+    div.alert.alert-danger.alert-dismissible(style='display:none')
+      a.close(href='#', data-dismiss='alert')
+      strong 
+      |  검색어를 입력하세요.
+
+    p
+    div.container-fluid
+        div.row
+            div.col-md-8
+            div.col-md-2
+                input.form-control(type='text' id='searchText' name='searchText')
+            div.col-md-2   
+                div.dropdown
+                    button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' style='width:100%') 검색유형
+                        span.span.caret
+                    ul.dropdown-menu.dropdown-menu(role='menu', aria-labelledby='menu1')
+                        li(role='presentation')
+                            a(role='menuitem', tabindex='-1', href='#' data-type='title,content') 제목,본문
+                        li(role='presentation')
+                            a(role='menuitem', tabindex='-1', href='#' data-type='title') 제목
+                        li(role='presentation')
+                            a(role='menuitem', tabindex='-1', href='#' data-type='content') 본문
+                        //li(role='presentation')
+                        //    a(role='menuitem', tabindex='-1', href='#' data-type='작성자') 작성자
+                        //li.divider(role='presentation')
+                        //li(role='presentation')
+                        //    a(role='menuitem', tabindex='-1', href='#') About Us                            
+                        //button.btn.btn-primary.btn-info(onclick='search()') 조회
+        div.row
+            div.col-md-12
+                                            table.table.table-striped
+                                                thead
+                                                    tr
+                                                        th Num     
+                                                        th.stretch Title    
+                                                        th Content      
+                                                        th Date     
+                                                        th Author 
+                                                tbody
+                                                    - if (question.length > 0) {
+                                                        // - for( var i = 0 ; length = question.length > i ; i++ ){ //속도가 빠르다고 알고 있음.
+                                                        - for( var i in question ){ //속도가 느리다고 알고 있음.
+                                                            tr(onclick="onclick=location.href='/question/#{question[i]._id}/show'")
+                                                                td  #{question[i].numId}  
+                                                                td.highlight(data-highlight='search.highlight.title') #{question[i].title}
+                                                                td #{question[i].content}
+                                                                td #{question[i].createdAt}
+                                                                td #{question[i].views}
+                                                        - }
+                                                    - }else{
+                                                        tr
+                                                            td(colspan='5' align='center') 조회된 데이타가 없습니다.
+                                                    - }

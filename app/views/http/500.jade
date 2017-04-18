@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block head
+  title Server Error
+
+block content
+  h1 Server Error
+  p.lead
+    | Sorry something went wrong.
+  - if (err.stack)
+        pre #{err.stack}
+ 

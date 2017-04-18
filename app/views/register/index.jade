@@ -1,0 +1,24 @@
+extends ../layouts/account
+
+block content
+    .masthead.clearfix
+        .inner
+            h3.masthead-brand 계정등록
+            nav
+                ul.nav.masthead-nav
+                    li.active
+                        a(href='/auth/login') Sign In
+                
+            form.form.col-md-12.center-block(method='post')
+                .form-group
+                    input.form-control.input-lg(type='text' placeholder='이름' name='name' required value='')
+                .form-group
+                    input.form-control.input-lg(type='text' placeholder='성' name='last_name' required value='')
+                .form-group
+                    input.form-control.input-lg(type='email' placeholder='e-mail' name='email' required value='')
+                .form-group
+                    input.form-control.input-lg(type='text' placeholder='아이디' name='user_name' required value='')
+                .form-group
+                    input.form-control.input-lg(type='password' placeholder='비밀번호' name='password' required value='')
+                .form-group
+                    button.btn.btn-success.btn-lg.btn-block 저장

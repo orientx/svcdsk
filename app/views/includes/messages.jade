@@ -1,0 +1,4 @@
+while _msg = flash.shift()
+    - _msg.type = _msg.type === 'error' ? 'danger' : _msg.type;
+    div(class='alert alert-#{_msg.type}' role='alert')
+        p= __(_msg.message)
