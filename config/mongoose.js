@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 const CONN_STR = CONFIG.DATABASE.DATABASE_URL;
 const options = CONFIG.DATABASE.options;
 
-//mongoose.connect(CONN_STR, options);
-mongoose.connect('mongodb://mysd:mysd123qwe@127.0.0.1/servicedesk');
+mongoose.connect(CONN_STR, options);
+//mongoose.connect('mongodb://mysd:mysd123qwe@127.0.0.1/servicedesk');
 //mongoose.connect('mongodb://127.0.0.1/servicedesk');
 
 mongoose.connection.on('connected', () => {
