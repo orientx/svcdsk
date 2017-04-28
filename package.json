@@ -12,12 +12,12 @@
   "license": "ISU",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orientx/nd_st.git"
+    "url": "git+https://github.com/orientx/svcdsk.git"
   },
   "bugs": {
-    "url": "https://github.com/orientx/nd_st/issues"
+    "url": "https://github.com/orientx/svcdsk/issues"
   },
-  "homepage": "https://github.com/orientx/nd_st#readme",
+  "homepage": "https://github.com/orientx/svcdsk#readme",
   "dependencies": {
     "async": "^1.5.2",
     "backbone": "^1.3.3",
